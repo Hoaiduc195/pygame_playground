@@ -58,6 +58,7 @@ parent = {}
 Shortest_path = list()
 ##################################################################
 
+
 ##################################################################
 # GAME LOOP
 while True:
@@ -65,7 +66,6 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
-            
     screen.fill("white")
     if GAMESTATE == 'STOPMODE':
         keys = pygame.key.get_pressed()
@@ -125,6 +125,7 @@ while True:
                 GAMESTATE = "STOPMODE"
                 pixels = [[0 for _ in range(cols)] for _ in range(rows)]
                 visited = [[False for _ in range(cols)] for _ in range(rows)]
+                time.sleep(2)
                 continue
             current_point = stack.pop()
             if(current_point == endpoint):
@@ -156,6 +157,7 @@ while True:
                 pixels = [[0 for _ in range(cols)] for _ in range(rows)]
                 visited = [[False for _ in range(cols)] for _ in range(rows)]
                 parent = {}
+                time.sleep(2)
                 continue
             else:
                 current_point = queue.pop(0)

@@ -22,7 +22,7 @@ def read_file(filename, edges):
         for line in file:
             edge = [int(x) for x in line.strip().split()]
             edges.append(edge)
-            
+    
 def retrieve_node(edges, adjacency_list, nodes):
     for edge in edges:
         u, v = edge
@@ -51,7 +51,7 @@ def draw_node(nodes):
         for adj_node_id in node["adj"]:
             adj_node = nodes[adj_node_id]
             adj_node_pos = adj_node["position"]
-            pygame.draw.line(screen, "GREY", node["position"], adj_node_pos, 10)
+            pygame.draw.line(screen, "GREY", node["position"], adj_node_pos, 5)
         
     # draw nodes
     for node_id in nodes:
